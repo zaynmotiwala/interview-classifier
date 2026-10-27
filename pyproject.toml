@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "interview-classifier"
+version = "1.0.0"
+description = "Standalone Email Classifier - Interview Assessment Project"
+authors = ["RevReply Team"]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+fastapi = "^0.115.11"
+uvicorn = ">=0.23.1"
+python-dotenv = "^1.0.1"
+dspy = "3.1.0"
+pydantic = "2.10.6"
+httpx = ">=0.26.0,<0.29.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-dotenv = "^0.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
